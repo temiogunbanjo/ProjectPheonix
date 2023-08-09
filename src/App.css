@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+main .hero {
+  background-color: black;
   color: white;
+  min-height: 500px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(./assets/IMG_9896.jpg);
 }
 
-.App-link {
-  color: #61dafb;
+main .hero h1 {
+  font-size: 64px;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+main .hero h4 {
+  font-size: 32px;
+}
+
+main > section {
+  min-height: 500px;
+  height: auto;
+  padding: var(--section-padding-y) var(--section-padding-y);
+  /* background-color: #174169; */
+}
+
+main > section > * {
+  max-width: 1440px;
+}
+
+main > section h2 {
+  color: #271b00;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 32px;
+  /* letter-spacing: 1px; */
+  font-weight: 800;
+}
+
+main > section img + * {
+  font-size: 1rem;
+  line-height: 2;
+  max-width: 650px;
+}
+
+main > section#importance {
+  min-height: unset;
+  background-color: var(--secondary-color);
+  background-size: 8%;
+  background-image: url(./assets/noise.png);
+  color: white;
+  /* padding-left: 0;
+  padding-right: 0; */
+}
+
+main > section .sectioner {
+  position: relative;
+}
+
+main > section .sectioner::before,
+main > section .sectioner::after {
+  top: 50%;
+  content: "";
+  border: 1px solid #516a7b;
+  width: 100px;
+  display: block;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+main > section .sectioner::after {
+  right: calc(-100px - 0px);
+}
+
+main > section .sectioner::before {
+  left: calc(-100px - 0px);
+}
+
+main > section#importance .card {
+  /* padding: 1rem;
+  border: 1px solid; */
+  flex-grow: 1;
+  max-width: 400px;
+  width: calc(33.33% - 2rem);
+  min-width: 250px;
+}
+
+/* For all mobile users only */
+@media only screen and (max-width: 640px) {
+  main > section#importance .card {
+    max-width: unset;
+    /* min-width: 200px; */
   }
 }
