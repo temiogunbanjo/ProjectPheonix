@@ -1,4 +1,4 @@
-const GodwinFrance = require("../assets/Godwin France picture passport.JPG");
+const GodwinFrance = require("../assets/Godwin France picture passport.jpg");
 const Nosa = require("../assets/Nosa.jpeg");
 const Wadnud = require("../assets/Dr. Wadnud profile 2.jpg");
 const Vignon = require("../assets/Vignon Adjanohoun.png");

@@ -73,9 +73,9 @@ const Home = () => {
         <h1 className="uppercase text-center" style={{ lineHeight: 1.1 }}>
           Project Phoenix
         </h1>
-        <h4 className="uppercase mt-2">The new chapter</h4>
+        <h4 className="uppercase mt-2 text-center">The new chapter</h4>
         <Button text="Donate" className="rounded-md mt-8 text-black bg-white" href={"#donate"} />
-        <span className="mt-8">{`Fundraising target: ${
+        <span className="mt-8 text-center">{`Fundraising target: ${
           donations.currencySymbol || donations.currency
         }${formatAsMoney(donations.target)}`}</span>
       </section>
@@ -223,7 +223,7 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row-reverse items-center my-8">
             <img
-              src={require("../assets/getty.jpeg")}
+              src={require("../assets/getty.jpg")}
               alt="Target Audience"
               className="border flex-none mb-6 sm:mb-0 rounded-lg"
               style={{ width: "auto", height: "200px" }}
