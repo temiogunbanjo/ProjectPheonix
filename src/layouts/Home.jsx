@@ -938,7 +938,6 @@ const Home = () => {
         className="flex flex-col items-center"
         style={{
           ...styles.autoHeightSections,
-          padding: "48px 48px",
           color: "#fff",
           backgroundColor: "var(--secondary-color)",
         }}

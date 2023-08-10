@@ -35,7 +35,7 @@ code {
 /* For all mobile users only */
 @media only screen and (max-width: 640px) {
   * {
-    --section-padding-x: 2rem;
-    --section-padding-y: 3rem;
+    --section-padding-x: 1.5rem;
+    --section-padding-y: 2rem;
   }
 }
