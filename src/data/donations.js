@@ -1,6 +1,6 @@
 module.exports = {
   target: 6000,
-  currentAmount: 100,
+  currentAmount: 0,
   numberOfDonations: 0,
   currency: 'USD',
   currencySymbol: '$',

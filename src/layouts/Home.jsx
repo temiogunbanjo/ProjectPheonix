@@ -855,16 +855,17 @@ const Home = () => {
 
           <div className="flex flex-col w-full sm:w-1/2 sm:ml-4">
             <div className="flex flex-col w-full p-6 rounded-lg bg-white border border-slate-200">
-              <h6 className="text-xl font-medium mb-1">{`De-Fi Wallet (Crypto Stablecoin)`}</h6>
+              <h3 className="text-xl font-medium mb-1">{`De-Fi Wallet (Crypto Stablecoin)`}</h3>
               <div className="flex flex-row items-center">
                 <span className="text-sm text-gray-500 mr-1">{`Token Name: `}</span>
                 <span className="text-sm text-gray-500">{`${donations?.wallets?.defi?.tokenName}`}</span>
               </div>
               <div className="flex flex-col items-start mt-0.5">
-                <span className="text-sm text-gray-500 mr-1 whitespace-nowrap">{`Wallet Address:`}</span>
+                <label htmlFor="wallet-address-input" className="text-sm text-gray-500 mr-1 whitespace-nowrap">{`Wallet Address:`}</label>
 
                 <div className="flex flex-row mt-1 w-full">
                   <input
+                    id="wallet-address-input"
                     ref={inputRef1}
                     className="bg-slate-100 text-gray-500 px-2 py-1 rounded-sm text-sm w-full"
                     value={`${donations?.wallets?.defi?.address}`}
@@ -884,7 +885,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col w-full mt-3 p-6 rounded-lg bg-white border border-slate-200">
-              <h6 className="text-xl font-medium mb-1">{`Bank Information (${donations?.wallets?.bank?.currency})`}</h6>
+              <h3 className="text-xl font-medium mb-1">{`Bank Information (${donations?.wallets?.bank?.currency})`}</h3>
 
               <div className="flex flex-row items-center">
                 <span className="text-sm text-gray-500 mr-1">{`Bank Name:`}</span>
@@ -907,10 +908,11 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col items-start mt-0.5">
-                <span className="text-sm text-gray-500 mr-1 whitespace-nowrap">{`Account Number:`}</span>
+                <label htmlFor="account-number-input" className="text-sm text-gray-500 mr-1 whitespace-nowrap">{`Account Number:`}</label>
 
                 <div className="flex flex-row mt-1 w-full">
                   <input
+                    id="account-number-input"
                     ref={inputRef2}
                     className="bg-slate-100 text-gray-500 px-2 py-1 rounded-sm text-sm w-full"
                     value={`${donations?.wallets?.bank?.accountNumber}`}
