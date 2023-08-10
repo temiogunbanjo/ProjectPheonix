@@ -3,7 +3,7 @@ import { GiPrisoner, GiChart, GiHandcuffs } from "react-icons/gi";
 import { MdEmail, MdOutlineFace } from "react-icons/md";
 import { IoBookSharp, IoBarChartSharp } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
-import { FaEquals, FaLinkedinIn } from "react-icons/fa";
+import { FaEquals, FaLinkedinIn, FaGlobe } from "react-icons/fa";
 import { ImLibrary } from "react-icons/im";
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from "react-icons/bi";
 
@@ -62,11 +62,6 @@ const Home = () => {
     []
   );
 
-  const contactIconProps = {
-    className: "rounded-md mx-2 text-lg",
-    style: { padding: "10px" },
-  };
-
   return (
     <>
       <section className="hero flex flex-col items-center justify-center">
@@ -79,7 +74,7 @@ const Home = () => {
           Project Phoenix
         </h1>
         <h4 className="uppercase mt-2">The new chapter</h4>
-        <Button text="Donate" className="rounded-md mt-8" href={"#donate"} />
+        <Button text="Donate" className="rounded-md mt-8 text-black bg-white" href={"#donate"} />
         <span className="mt-8">{`Fundraising target: ${
           donations.currencySymbol || donations.currency
         }${formatAsMoney(donations.target)}`}</span>
@@ -184,8 +179,8 @@ const Home = () => {
         <div className="flex flex-col">
           <div className="flex flex-col sm:flex-row-reverse items-center my-8">
             <img
-              src={require("../assets/IMG_9900.jpg")}
-              alt=""
+              src={require("../assets/_MG_9912.jpg")}
+              alt="Who we are"
               className="border flex-none mb-6 sm:mb-0 rounded-lg"
               style={{ width: "auto", height: "200px" }}
             />
@@ -199,16 +194,15 @@ const Home = () => {
                 skills. The goal is to prepare them on their reintegration
                 journey for the 21st Century and its increasingly digital job
                 market. Project Phoenix aims to engage and equip 250 inmates
-                with knowledge of at least one programming language by December
-                2022.
+                with knowledge of at least one digital skill by December 2023.
               </p>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center my-8">
             <img
-              src={require("../assets/IMG_9900.jpg")}
-              alt=""
+              src={require("../assets/_MG_9901.jpg")}
+              alt="Goals & Mission"
               className="border flex-none mb-6 sm:mb-0 rounded-lg"
               style={{ width: "auto", height: "200px" }}
             />
@@ -229,8 +223,8 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row-reverse items-center my-8">
             <img
-              src={require("../assets/IMG_9900.jpg")}
-              alt=""
+              src={require("../assets/getty.jpeg")}
+              alt="Target Audience"
               className="border flex-none mb-6 sm:mb-0 rounded-lg"
               style={{ width: "auto", height: "200px" }}
             />
@@ -754,6 +748,18 @@ const Home = () => {
                   {...contactIconProps}
                 />
               )}
+
+              {coordinator?.website && (
+                <Button
+                  text={
+                    <div className="flex flex-row items-center">
+                      <FaLinkedinIn />
+                      <span className="ml-2 text-sm">LinkedIn</span>
+                    </div>
+                  }
+                  {...contactIconProps}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -849,7 +855,7 @@ const Home = () => {
 
           <div className="flex flex-col w-full sm:w-1/2 sm:ml-4">
             <div className="flex flex-col w-full p-6 rounded-lg bg-white border border-slate-200">
-              <h6 className="text-xl font-medium mb-1">{`De-Fi`}</h6>
+              <h6 className="text-xl font-medium mb-1">{`De-Fi Wallet (Crypto Stablecoin)`}</h6>
               <div className="flex flex-row items-center">
                 <span className="text-sm text-gray-500 mr-1">{`Token Name: `}</span>
                 <span className="text-sm text-gray-500">{`${donations?.wallets?.defi?.tokenName}`}</span>
@@ -953,24 +959,30 @@ const Home = () => {
               />
 
               <div className="flex flex-col mt-5 items-center">
-                <h3 className="text-2xl mb-1 capitalize font-small text-center">
+                <h3 className="text-xl mb-1 capitalize font-medium text-center">
                   {each?.name}
                 </h3>
                 {each?.role.map((role, ind) => (
                   <span
                     key={ind}
-                    className="inline-block capitalize font-small mb-1 text-gray-200 text-center text-xs"
+                    className="inline-block capitalize font-small mb-0.5 text-white text-center text-xs"
+                    style={{ maxWidth: "260px" }}
                   >
                     {role}
                   </span>
                 ))}
               </div>
 
-              <div className="flex flex-row mt-2">
+              <div className="flex flex-row mt-4">
                 {each?.email && (
                   <Button
                     href={`mailto:${each?.email}`}
-                    text={<MdEmail />}
+                    text={
+                      <div className="flex flex-row items-center">
+                        <MdEmail />
+                        <span className="ml-2 text-xs">Mail</span>
+                      </div>
+                    }
                     {...contactIconProps}
                   />
                 )}
@@ -978,7 +990,25 @@ const Home = () => {
                   <Button
                     target="blank"
                     href={each?.linkedIn}
-                    text={<FaLinkedinIn />}
+                    text={
+                      <div className="flex flex-row items-center">
+                        <FaLinkedinIn />
+                        <span className="ml-2 text-xs">LinkedIn</span>
+                      </div>
+                    }
+                    {...contactIconProps}
+                  />
+                )}
+                {each?.website && (
+                  <Button
+                    target="blank"
+                    href={each?.website}
+                    text={
+                      <div className="flex flex-row items-center">
+                        <FaGlobe />
+                        <span className="ml-2 text-xs">Website</span>
+                      </div>
+                    }
                     {...contactIconProps}
                   />
                 )}
@@ -989,6 +1019,11 @@ const Home = () => {
       </section>
     </>
   );
+};
+
+const contactIconProps = {
+  className: "rounded-sm mx-2 text-lg border border-2 bg-transparent hover:bg-white text-white hover:text-black transition-all",
+  style: { padding: "10px" },
 };
 
 const styles = {

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Button = ({
   text,
-  className = "rounded-md",
+  className = "rounded-md text-black bg-white",
   style = {},
   href,
   ...props
@@ -12,8 +12,6 @@ export const Button = ({
       className={className}
       style={{
         textTransform: "uppercase",
-        backgroundColor: "white",
-        color: "black",
         padding: "12px 24px",
         letterSpacing: "1px",
         fontWeight: 500,
@@ -30,8 +28,6 @@ export const Button = ({
       style={{
         textAlign: "center",
         textTransform: "uppercase",
-        backgroundColor: "white",
-        color: "black",
         padding: "12px 24px",
         letterSpacing: "1px",
         fontWeight: 500,
