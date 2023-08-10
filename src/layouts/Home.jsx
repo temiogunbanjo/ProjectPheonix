@@ -957,7 +957,7 @@ const Home = () => {
                 src={each?.imgSource}
                 alt={each?.name}
                 className="flex flex-row items-center justify-center text-center align-middle border rounded-full bg-gray-500 object-cover object-top"
-                style={{ width: "150px", height: "150px" }}
+                style={{ width: "200px", height: "200px" }}
               />
 
               <div className="flex flex-col mt-5 items-center">
