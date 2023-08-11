@@ -187,14 +187,16 @@ const Home = () => {
 
             <div className="flex flex-col items-center sm:items-start sm:mr-10">
               <h3 className="text-2xl capitalize font-normal mb-3 text-gray-500">
-                Who we are
+                What we doing
               </h3>
               <p className="text-center sm:text-left">
                 Project Phoenix is an initiative to equip convicts with digital
                 skills. The goal is to prepare them on their reintegration
                 journey for the 21st Century and its increasingly digital job
-                market. Project Phoenix aims to engage and equip 250 inmates
-                with knowledge of at least one digital skill by December 2023.
+                market. The pilot project for four months will be a parallel cohort 
+                of intro to web development and digital marketing - 10 juveniles each. 
+                Project Phoenix aims to engage and equip 250 inmates with proficiency 
+                of at least one digital skills each year.
               </p>
             </div>
           </div>
