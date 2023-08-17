@@ -187,7 +187,7 @@ const Home = () => {
 
             <div className="flex flex-col items-center sm:items-start sm:mr-10">
               <h3 className="text-2xl capitalize font-normal mb-3 text-gray-500">
-                What we doing
+                What we are doing
               </h3>
               <p className="text-center sm:text-left">
                 Project Phoenix is an initiative to equip convicts with digital
