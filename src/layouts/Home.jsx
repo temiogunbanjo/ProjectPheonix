@@ -1,19 +1,19 @@
 import React, { useCallback, useRef } from "react";
-import { GiPrisoner, GiChart, GiHandcuffs } from "react-icons/gi";
+import { ImLibrary } from "react-icons/im";
+import { IoIosPeople } from "react-icons/io";
 import { MdEmail, MdOutlineFace } from "react-icons/md";
 import { IoBookSharp, IoBarChartSharp } from "react-icons/io5";
-import { IoIosPeople } from "react-icons/io";
 import { FaEquals, FaLinkedinIn, FaGlobe } from "react-icons/fa";
-import { ImLibrary } from "react-icons/im";
+import { GiPrisoner, GiChart, GiHandcuffs } from "react-icons/gi";
 import { BiSolidQuoteLeft, BiSolidQuoteRight } from "react-icons/bi";
 
+import Avatar from "../components/common/Avatar";
 import { Button } from "../components/common/Button";
 
 import donations from "../data/donations";
 import team from "../data/team";
 
 import { formatAsMoney } from "../utility";
-import Avatar from "../components/common/Avatar";
 
 const { others: teamMembers, coordinator } = team;
 
@@ -755,8 +755,8 @@ const Home = () => {
                 <Button
                   text={
                     <div className="flex flex-row items-center">
-                      <FaLinkedinIn />
-                      <span className="ml-2 text-sm">LinkedIn</span>
+                      <FaGlobe />
+                      <span className="ml-2 text-sm">Website</span>
                     </div>
                   }
                   {...contactIconProps}
