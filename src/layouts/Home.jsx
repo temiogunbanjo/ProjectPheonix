@@ -74,7 +74,7 @@ const Home = () => {
           Project Phoenix
         </h1>
         <h4 className="uppercase mt-2 text-center">The new chapter</h4>
-        <Button text="Donate" className="rounded-md mt-8 text-black bg-white" href={"#donate"} />
+        //<Button text="Donate" className="rounded-md mt-8 text-black bg-white" href={"#donate"} />
         <span className="mt-8 text-center">{`Fundraising target: ${
           donations.currencySymbol || donations.currency
         }${formatAsMoney(donations.target)}`}</span>
