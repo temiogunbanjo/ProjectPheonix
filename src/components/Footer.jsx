@@ -7,7 +7,7 @@ const Footer = () => {
       style={{ backgroundColor: "black", color: '#fff' }}
     >
       
-      <a href="https://learnira.org">{"Powered by Learnira"}</a>
+      <a href="#">{"Powered by AfroMeta"}</a>
     </div>
   );
 };
